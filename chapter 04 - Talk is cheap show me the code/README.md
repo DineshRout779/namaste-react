@@ -1,8 +1,8 @@
 # Namste React
 
-## Parcel
+## Why Parcel?
 
-- Dev Build
+- Development Build
 - Local Server
 - HMR (Hot Module Replacement)
 - Uses File Watching Algorithm
