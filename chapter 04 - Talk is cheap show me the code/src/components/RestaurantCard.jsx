@@ -13,8 +13,9 @@ const RestaurantCard = ({ item }) => {
     <div className='card'>
       <img
         src={`${CDN_URL}/${cloudinaryImageId}`}
-        alt=''
+        alt={name}
         className='card-img'
+        loading='lazy'
       />
       <div className='card-desc'>
         <h4>{name}</h4>

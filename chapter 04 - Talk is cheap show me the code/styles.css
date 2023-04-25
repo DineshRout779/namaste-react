@@ -24,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-a {
+a,
+button {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -64,18 +65,6 @@ a {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 3em 1em;
   margin: 2em auto;
-}
-
-@media screen and (max-width: 960px) {
-  .cards-group {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .cards-group {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 .card {
@@ -178,10 +167,62 @@ a {
   color: #333;
   border: 1px solid #fff;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .btn-submit {
   background-color: var(--primary);
   color: #fff;
   border: 1px solid var(--primary);
+}
+
+.btn-link {
+  color: #141414;
+  background-color: rgb(231, 226, 226);
+  font-weight: bold;
+}
+
+/* loading card */
+.loading-group {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 3em 1em;
+  margin: 2em auto;
+}
+
+.loading-img {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+}
+
+.loading-desc h4 {
+  background-color: #efefef;
+  margin: 16px 0;
+  height: 16px;
+}
+
+.loading-desc small {
+  background-color: #efefef;
+  width: 60%;
+  height: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 960px) {
+  .cards-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .loading-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .cards-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .loading-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
